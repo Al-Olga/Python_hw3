@@ -6,12 +6,14 @@
 
 print('Введите десятичное число: ')
 n = int(input())
+str_dv = ''
 if n < 2:
     print(n)
 else:
-    list = []
     while n >= 2:
-        list.append(str(n % 2))
+        str_dv = str_dv + (str(n % 2))
         n = n // 2
-    list.append(str(n))
-    print(list)
+    str_dv = str_dv + (str(n))
+    # print(str_dv)
+    str_convert= ''.join(reversed(str_dv))
+    print(str_convert)
